@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREMONTA - Freaking Delicious</title>
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar">
+        <img src="/src/images/nav-logo.svg" alt="nav-logo" class="nav-logo" id="nav-logo" />
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-main-bg" id="hero">
+            <div class="hero-container">
+    
+                <!-- Desktop Video -->
+                <video src="/src/videos/hero-bg.mp4"
+                    autoplay
+                    muted
+                    playsinline
+                    class="hero-video"></video>
+    
+                <!-- Tablet / Mobile Images -->
+                <img src="/src/images/hero-bg.png" class="hero-bg-img" />
+                <img src="/src/images/hero-img.png" class="hero-front-img" />
+    
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <div class="overflow-hidden">
+                        <h1 class="hero-title">Premium Coffee</h1>
+                    </div>
+    
+                    <div class="hero-text-scroll"
+                         style="clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);">
+                        <div class="hero-subtitle">
+                            <h1>Caffeine + Clean Energy</h1>
+                        </div>
+                    </div>
+    
+                    <h2>
+                        Drop a cube. Wait 20 seconds. Sip café-quality coffee that's smooth, bold, and loaded with natural caffeine—no measuring, no mess, no compromise.​
+button
+                    </h2>
+    
+                    <div class="hero-button">
+                        <p>Drop a CREMONTA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-content" id="message">
+            <div class="container flex-center">
+                <div class="w-full h-full">
+                    <div class="msg-wrapper">
+                        <h1 class="first-message">Ditch the weak instant coffee ritual and</h1>
+
+                        <div class="msg-text-scroll" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);">
+                            <div class="bg-light-brown">
+                                <h2 class="text-red-brown">Power Up</h2>
+                            </div>
+                        </div>
+
+                        <h1 class="second-message">
+                            your mornings with pure Arabica coffee in every cube.
+                        </h1>
+                    </div>
+
+                    <div class="flex-center msg-paragraph">
+                        <div class="max-w-md flex-center overflow-hidden">
+                            <p class="message-paragraph">
+                                Unlock café-quality taste and natural energy with our innovative coffee cube technology. Each 6g cube delivers genuine coffee flavor and 60-80mg of natural caffeine—30x more coffee than ordinary instant alternatives
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flavor Section -->
+        <section class="flavor-section" id="flavors">
+            <div class="flavor-container">
+                <!-- Title Section -->
+                <div class="flavor-title-wrapper">
+                    <div class="general-title col-center h-full gap-title">
+                        <div class="overflow-hidden py-title first-text-split">
+                            <h1>Discover Our</h1>
+                        </div>
+
+                        <div class="flavor-text-scroll" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);">
+                            <div class="bg-mid-brown inner-scroll-box">
+                                <h2 class="text-milk">Premium</h2>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden py-title second-text-split">
+                            <h1>Coffee Flavors</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="slider-wrapper">
+                    <div class="flavors" id="flavors-container">
+                        <!-- Cards will be generated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition Section -->
+        <section class="nutrition-section" id="nutrition">
+            <img src="/src/images/slider-dip.png" alt="" class="w-full object-cover" />
+
+            <img src="/src/images/big-img.png" alt="" class="big-img" />
+
+            <div class="nutrition-flex">
+                <div class="nutrition-title-wrapper">
+                    <div class="general-title nutrition-title-inner">
+                        <div class="overflow-hidden place-self-start">
+                            <h1 class="nutrition-title">It Still Hits</h1>
+                        </div>
+                        <div class="nutrition-text-scroll place-self-start" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);">
+                            <div class="bg-yellow-brown highlight-box">
+                                <h2 class="text-milk-yellow">Body Good</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nutrition-paragraph-wrapper">
+                    <div class="nutrition-paragraph-box">
+                        <p class="text-lg text-right text-balance font-paragraph">
+                            Coffee contains a wide array of nutrients, including vitamins,
+                            minerals, and protein
+                        </p>
+                    </div>
+                </div>
+
+                <div class="nutrition-box">
+                    <div class="list-wrapper" id="nutrient-list">
+                        <!-- Generated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits & Testimonials Wrapper -->
+        <div>
+            <!-- Benefit Section -->
+            <section class="benefit-section" id="benefits">
+                <div class="container col-center">
+                    <div class="col-center">
+                        <p>
+                            Unlock the Advantages: <br />
+                            Discover What Makes Every Cube Worth It
+                        </p>
+
+                        <div class="benefit-titles-wrapper">
+                            <div class="general-title">
+                                <div class="clip-title first-title" style="border-color:#222123; clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); opacity: 0;">
+                                    <div style="background:#c88e64;" class="clip-title-inner">
+                                        <h2 style="color:#faeade;">Shelf stable</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="general-title">
+                                <div class="clip-title second-title" style="border-color:#222123; clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); opacity: 0;">
+                                    <div style="background:#faeade;" class="clip-title-inner">
+                                        <h2 style="color:#222123;">Natural caffeine</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="general-title">
+                                <div class="clip-title third-title" style="border-color:#222123; clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); opacity: 0;">
+                                    <div style="background:#7F3B2D;" class="clip-title-inner">
+                                        <h2 style="color:#faeade;">Infinitely recyclable</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="general-title">
+                                <div class="clip-title fourth-title" style="border-color:#222123; clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); opacity: 0;">
+                                    <div style="background:#FED775;" class="clip-title-inner">
+                                        <h2 style="color:#2E2D2F;">Clean label</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="more-box">
+                            <p>And much more ...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overlay-box">
+                    <!-- Video Pin Section -->
+                    <section class="vd-pin-section">
+                        <div class="video-box" id="video-box">
+                            <video src="/src/videos/pin-video.mp4" playsinline muted autoplay></video>
+
+                            <div class="abs-center scale-center">
+                                <img src="/src/images/circle-text.svg" alt="" class="spin-circle" />
+                                <div class="play-btn">
+                                    <img src="/src/images/play.svg" alt="" class="play-icon" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section" id="testimonials">
+                <div class="testimonial-titles">
+                    <h1 class="text-black first-title">What's</h1>
+                    <h1 class="text-light-brown sec-title">Everyone</h1>
+                    <h1 class="text-black third-title">Talking</h1>
+                </div>
+
+                <div class="pin-box" id="testimonial-cards">
+                    <!-- Cards will be generated by JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <section class="footer-section" id="contact">
+            <img src="/src/images/footer-dip.png" alt="" class="footer-dip" />
+
+            <div class="footer-content">
+                <div class="overflow-hidden z-10">
+                    <h1 class="general-title text-center text-milk">
+                        #DROPTHECUBE
+                    </h1>
+                </div>
+
+                <!-- Will be switched by JS for mobile/desktop -->
+                <div id="footer-media"></div>
+
+                <div class="social-row">
+                    <div class="social-btn">
+                        <img src="/src/images/yt.svg" alt="" />
+                    </div>
+                    <div class="social-btn">
+                        <img src="/src/images/insta.svg" alt="" />
+                    </div>
+                    <div class="social-btn">
+                        <img src="/src/images/tiktok.svg" alt="" />
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-groups">
+                        <div>
+                            <p>CREMONTA Flavors</p>
+                        </div>
+                        <div>
+                            <p>Chug Club</p>
+                            <p>Student Marketing</p>
+                            <p>Dairy Dealers</p>
+                        </div>
+                        <div>
+                            <p>Company</p>
+                            <p>Contacts</p>
+                            <p>Tasty Talk</p>
+                        </div>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>
+                            Get Exclusive Early Access and Stay Informed About Product
+                            Updates, Events, and More!
+                        </p>
+                        <div class="input-row">
+                            <input type="email" placeholder="Enter your email" />
+                            <img src="/src/images/arrow.svg" alt="arrow" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright-box">
+                    <p>Copyright © 2025 CREMONTA - All Rights Reserved</p>
+                    <div class="copyright-links">
+                        <p>Privacy Policy</p>
+                        <p>Terms of Service</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
