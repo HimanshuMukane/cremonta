@@ -84,9 +84,9 @@ function generateFlavors() {
     const container = document.getElementById("flavors-container");
     container.innerHTML = flavorlists.map(flavor => `
         <div class="flavor-card ${flavor.rotation}">
-            <img src="/src/images/${flavor.color}-bg.svg" class="bg" />
-            <img src="/src/images/${flavor.color}-drink.webp" class="drinks" />
-            <img src="/src/images/${flavor.color}-elements.webp" class="elements" />
+            <img src="src/images/${flavor.color}-bg.svg" class="bg" />
+            <img src="src/images/${flavor.color}-drink.webp" class="drinks" />
+            <img src="src/images/${flavor.color}-elements.webp" class="elements" />
             <h1>${flavor.name}</h1>
         </div>
     `).join("");
