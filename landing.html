@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cremonta – Quick Links</title>
+  
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      /* Slightly lighter neutral base to balance orange image */
+      color: #3a1f10;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 20px 16px 120px 16px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* Bottom-anchored, horizontally centered background image */
+      background-image: url("hero-image.png");
+      background-repeat: no-repeat;
+      background-position: center bottom; /* bottom = 0, centered from sides */
+      background-size: cover;            /* can crop other parts, even responsive */
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4a260f;
+      background: rgba(255, 248, 238, 0.9);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .title {
+        font-family: "Antonio", sans-serif;
+      font-size: 5rem;
+      line-height: 1.05;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .title span {
+      display: block;
+    }
+
+    .ribbon {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background-color: #24100a; /* darker to pop over orange */
+      color: #ffe7c7;
+        font-family: "Antonio", sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transform: rotate(-2deg);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .subtitle {
+      max-width: 520px;
+      margin: 28px auto 40px;
+      color: #ffe7c7;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .btn-main,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.18s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-main {
+      background-color: #2e1507; /* dark coffee to contrast orange */
+      color: #ffe7c7;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      border: none;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+      background-color: #3a1b0a;
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      border: 1px solid #2e1507;
+      color: #fff;
+      backdrop-filter: blur(2px);
+    }
+
+    .btn-ghost:hover {
+      background-color: rgba(255, 248, 238, 0.8);
+      color: #2e1507;
+    }
+
+    .btn-main span.icon,
+    .btn-ghost span.icon {
+      margin-right: 8px;
+      font-size: 1.1rem;
+    }
+
+    .foot-note {
+      margin-top: 26px;
+      font-size: 0.8rem;
+      color: #4f2d18;
+      text-shadow: 0 2px 4px rgba(255, 244, 230, 0.7);
+    }
+
+    @media (min-width: 768px) {
+      .cta-group {
+        flex-direction: row;
+        justify-content: space-between; /* two buttons on two sides */
+        max-width: 520px;
+        gap: 20px;
+      }
+
+      .cta-group > a {
+        flex: 1; /* make them take equal width on each side */
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="badge">Premium Coffee Cubes</div>
+
+    <h1 class="title">
+      <span>PREMIUM COFFEE CUBES</span>
+    </h1>
+
+    <div class="ribbon">Instant coffee, zero compromise</div>
+
+    <p class="subtitle">
+      Drop a cube. Wait 20 seconds. Café-quality coffee that’s bold,
+      smooth, and loaded with natural caffeine—no measuring, no mess.
+    </p>
+
+    <div class="cta-group">
+      <!-- Link to PPT -->
+      <a href="https://docs.google.com/presentation/d/1YtaM6D0AAe0ed54zM2BlGht_VmJgxzb01he8tr4DWG0/edit?usp=sharing" class="btn-main" target="_blank">
+        <span class="icon">📊</span>
+        Investor Presentation
+      </a>
+
+      <!-- Link to full marketing site -->
+      <a href="https://himanshumukane.github.io/cremonta/" class="btn-ghost" target="_blank">
+        <span class="icon">🌐</span>
+        Visit Main Website
+      </a>
+    </div>
+    <br>
+    <br>
+    <br>
+  </section>
+</body>
+</html>
